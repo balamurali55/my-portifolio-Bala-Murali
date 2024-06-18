@@ -1,61 +1,99 @@
-import { motion } from "framer-motion";
-import React, { useRef } from "react";
-
-
-const Skill = ({ name, x, y }) => {
-  const ref = useRef(null);
-  return (
-    <motion.div
-      ref={ref}
-      whileHover={{scale:1.05}}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: {duration: 1.5} }}
-      viewport={{ once: true }}
-      className="cursor-pointer w-max origin-center absolute 
-       font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
-       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold
-       "
-    >
-      {name}
-    </motion.div>
-  );
-};
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import javascriptpNG from "../../public/images/skills/JavaScript-logo.png";
+import ReactIcon from "../../public/images/skills/ReactIcon.png";
+import NextJsIcon from "../../public/images/skills/NextJsIcon.png";
+import TailwindCssIcon from "../../public/images/skills/TailwindCssIcon.png";
+import ReduxIcon from "../../public/images/skills/reduxIcon.png";
+import ZustandIcon from "../../public/images/skills/zustandIcon.png";
+import Typescript from "../../public/images/skills/Typescript.png";
+import postman from "../../public/images/skills/Postman.png";
+import materialUi from "../../public/images/skills/MaterialUi.png";
+import GitHubIcon from "../../public/images/skills/GitHubIcon.png";
+import CssIcon from "../../public/images/skills/CssIcon.png";
+import BootstrapIcon from "../../public/images/skills/Bootstrap.png";
 
 const Skills = () => {
-  const ref = useRef(null);
+  const iconsRef = useRef([]);
+
+  useEffect(() => {
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "translate-y-0");
+        }
+      });
+    }, options);
+
+    iconsRef.current.forEach((icon) => {
+      observer.observe(icon);
+    });
+
+    return () => {
+      iconsRef.current.forEach((icon) => {
+        observer.unobserve(icon);
+      });
+    };
+  }, []);
+
   return (
-<>
+    <>
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
         Skills
-      </h2> 
-    <div
-      ref={ref}
-      className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark  flex items-center justify-center 
-      mb-64 md:mb-32 rounded-full
-      lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] 
-      "
-    >
-   
-        <motion.div whileHover={{scale:1.05}} className="cursor-pointer flex rounded-full font-semibold bg-dark text-light p-8 shadow-dark
-        dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2
-        ">
-        Web
-      </motion.div>
-
-        <Skill name="HTML" x="-20vw" y="2vw" />
-
-          <Skill name="CSS" x="-5vw" y="-10vw" />
-          <Skill name="JavaScript" x="20vw" y="6vw" />
-          <Skill name="ReactJS" x="0vw" y="12vw" />
-          <Skill name="NextJS" x="-20vw" y="-15vw" />
-          <Skill name="GatsbyJS" x="15vw" y="-12vw" />
-          <Skill name="Github" x="-35vw" y="-5vw" />
-          <Skill name="Web Design" x="32vw" y="-5vw" />
-          <Skill name="Figma" x="0vw" y="-20vw" />
-          <Skill name="Firebase" x="-25vw" y="18vw" />
-          <Skill name="Tawilwind CSS" x="28vw" y="18vw" />
-    </div></>
+      </h2>
+      <div className="grid grid-cols-4 gap-8 mt-10 space-y-4">
+        <div className="pt-4">
+          <Image
+            src={javascriptpNG}
+            width={90}
+            height={90}
+            alt="JavaScript"
+          />
+        </div>
+        <div>
+          <Image src={ReactIcon} width={110} height={110} alt="React" />
+        </div>
+        <div>
+          <Image src={NextJsIcon} width={90} height={90} alt="Next.js" />
+        </div>
+        <div>
+          <Image
+            src={TailwindCssIcon}
+            width={110}
+            height={110}
+            alt="Tailwind CSS"
+          />
+        </div>
+        <div>
+          <Image src={ReduxIcon} width={90} height={90} alt="Redux" />
+        </div>
+        <div>
+          <Image src={ZustandIcon} width={150} height={150} alt="Zustand" />
+        </div>
+        <div>
+          <Image src={Typescript} width={85} height={85} alt="TypeScript" />
+        </div>
+        <div>
+          <Image src={postman} width={90} height={90} alt="Postman" />
+        </div>
+        <div>
+          <Image src={materialUi} width={110} height={110} alt="Material-UI" />
+        </div>
+        <div className="relative right-2">
+          <Image src={GitHubIcon} width={170} height={170} alt="GitHub" />
+        </div>
+        <div className="pt-2">
+          <Image src={CssIcon} width={90} height={90} alt="CSS" />
+        </div>
+        <div>
+          <Image src={BootstrapIcon} width={110} height={110} alt="Bootstrap" />
+        </div>
+      </div>
+    </>
   );
 };
 
