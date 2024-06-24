@@ -144,31 +144,6 @@ export default function Articles() {
               link="https://infinite-scroll-1zpzo45um-balamurali55s-projects.vercel.app/"
             />
           </ul>
-
-          <h2 className="font-bold text-4xl w-full text-center mt-32 my-16">
-            All Articles
-          </h2>
-
-          <ul className="flex flex-col items-center relative">
-            <Article
-              title="form validation in reactjs: build a reusable custom hook for inputs and error handling"
-              img={blog3}
-              date="January 27, 2023"
-              link="https://devdreaming.com/blogs/react-form-validation-custom-hook"
-            />
-            <Article
-              title="silky smooth scrolling in reactjs: a step-by-step guide for react developers"
-              img={blog4}
-              date="January 30, 2023"
-              link="https://devdreaming.com/blogs/smooth-scrolling-in-react-js"
-            />
-            <Article
-              title="creating an efficient modal component in react using hooks and portals"
-              img={blog5}
-              date="January 29, 2023"
-              link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"
-            />
-          </ul>
         </Layout>
       </main>
     </>
