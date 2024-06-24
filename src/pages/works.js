@@ -2,14 +2,10 @@ import AnimatedText from "@/components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
-import blog1 from "../../public/images/articles/pagination component in reactjs.jpg";
-import blog2 from "../../public/images/articles/create loading screen in react js.jpg";
+import blog1 from "../../public/images/articles/inifinite-scroll.png";
 import blog3 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
 import blog4 from "../../public/images/articles/smooth scrolling in reactjs.png";
 import blog5 from "../../public/images/articles/create modal component in react using react portals.png";
-import blog6 from "../../public/images/articles/todo list app built using react redux and framer motion.png";
-import blog7 from "../../public/images/articles/What is Redux with easy explanation.png";
-import blog8 from "../../public/images/articles/What is higher order component in React.jpg";
 
 import Layout from "@/components/Layout";
 import Link from "next/link";
@@ -78,8 +74,10 @@ const Article = ({ img, title, date, link }) => {
       "
     >
       <MovingImg img={img} title={title} link={link} />
-      <span className="text-primary font-semibold dark:text-primaryDark min-w-max pl-4 sm:self-start 
-      sm:pl-0 xs:text-sm">
+      <span
+        className="text-primary font-semibold dark:text-primaryDark min-w-max pl-4 sm:self-start 
+      sm:pl-0 xs:text-sm"
+      >
         {date}
       </span>
     </motion.li>
@@ -88,8 +86,10 @@ const Article = ({ img, title, date, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative w-full p-4 col-span-1 bg-light border border-dark border-solid rounded-2xl 
-    dark:bg-dark dark:border-light">
+    <li
+      className="relative w-full p-4 col-span-1 bg-light border border-dark border-solid rounded-2xl 
+    dark:bg-dark dark:border-light"
+    >
       <div
         className="absolute  top-0 -right-3 w-[102%] h-[103%] rounded-[2rem]  rounded-br-3xl bg-dark 
         -z-10  "
@@ -126,12 +126,6 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 export default function Articles() {
   return (
     <>
-      <Head>
-        <title>Simple Portfolio Built with Nextjs | Articles Page</title>
-        <meta name="description" content="Browse through CodeBucks's collection of software engineering articles and 
-        tutorials on Next.js, React.js, web development, and more. 
-        Gain valuable insights and stay up-to-date with SEO tips for building a developer portfolio." />
-      </Head>
       <TransitionEffect />
       <main
         className={`w-full mb-16 flex flex-col items-center justify-center dark:text-light overflow-hidden`}
@@ -145,21 +139,9 @@ export default function Articles() {
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={blog1}
-              title="build a custom pagination component in reactjs from scratch"
-              time="9 min read"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this 
-              step-by-step guide to integrate Pagination component in your ReactJS project."
-              link="https://devdreaming.com/blogs/create-pagination-component-reactjs"
-            />
-
-            <FeaturedArticle
-              img={blog2}
-              title="creating stunning loading screens in react: Build 3 types of loading screens"
-              time="10 min read"
-              summary="Learn how to create stunning loading screens in React with 3 different methods. 
-              Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the 
-              user experience."
-              link="https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react"
+              title="build a custom infinite Scroll component in reactjs from scratch"
+              summary="Infinite scroll is a design pattern used in web development to load content continuously as the user scrolls down the page, without requiring them to click on pagination links."
+              link="https://infinite-scroll-1zpzo45um-balamurali55s-projects.vercel.app/"
             />
           </ul>
 
@@ -185,24 +167,6 @@ export default function Articles() {
               img={blog5}
               date="January 29, 2023"
               link="https://devdreaming.com/blogs/create-efficient-modal-react-portals"
-            />
-            <Article
-              title="build a fabulous todo list app with react, redux and framer-motion"
-              img={blog6}
-              date="January 28, 2023"
-              link="https://devdreaming.com/blogs/build-react-redux-framer-motion-todo-app"
-            />
-            <Article
-              title="redux simplified: a beginner's guide for web developers"
-              img={blog7}
-              date="January 31, 2023"
-              link="https://devdreaming.com/blogs/redux-simply-explained"
-            />
-            <Article
-              title="what is higher order component (hoc) in react?"
-              date="January 4, 2023"
-              img={blog8}
-              link="https://devdreaming.com/blogs/higher-order-component-hoc-react"
             />
           </ul>
         </Layout>
