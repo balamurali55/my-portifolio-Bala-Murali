@@ -5,18 +5,17 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
+import proj1 from "../../public/images/projects/mesky.png";
+import proj2 from "../../public/images/projects/DeliveryPortal.png";
+import proj3 from "../../public/images/projects/RiderPortal.png";
+// import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
+// import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
+// import proj6 from "../../public/images/projects/devdreaming.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
-
   return (
     <article
       className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
@@ -90,7 +89,6 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
 };
 
 const Project = ({ title, type, img, link, github }) => {
-
   return (
     <article
       className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
@@ -162,15 +160,6 @@ const Project = ({ title, type, img, link, github }) => {
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
-        <meta
-          name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 
-        expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
-        />
-      </Head>
-
       <TransitionEffect />
       <main
         className={`mb-16  flex w-full flex-col items-center justify-center dark:text-light`}
@@ -183,33 +172,35 @@ export default function Projects() {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+                type="E-commerce store"
+                title="Mesky: Your Premier Online Organic Product Store"
+                summary="Welcome to Mesky, your one-stop destination for the finest organic products. Our mission is to bring the best of nature to your doorstep, offering a wide range of high-quality, organic items that are ethically sourced and environmentally friendly. From fresh produce to natural skincare, every product in our store is carefully curated to promote a healthier, more sustainable lifestyle. Shop with us and experience the difference that true organic quality makes."
                 img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
+                link="https://mesky.in"
+                github="https://github.com/mesky-tech/main-react-app"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                title="NFT collection Website"
+            <div className="col-span-12 sm:col-span-12">
+              <FeaturedProject
+                type="Delivery Portal"
+                title="The Ultimate Vendor Delivery Management Portal"
+                summary="Delivery management portal designed for vendors to seamlessly monitor and control their entire delivery process. Our platform allows vendors to track orders in real-time, manage delivery agents, and oversee every aspect of the delivery chain. "
                 img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                link="http://43.205.153.221:5173/dashboard"
+                github=""
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website"
-                title="Fashion Studio Website"
+            <div className="col-span-12 sm:col-span-12">
+              <FeaturedProject
+                type="Rider Portal"
+                title="Rider Delivery and Tracking Portal"
+                summary="Delivery portal tailored for the seamless distribution of milk products. Our platform empowers riders to efficiently deliver products while providing real-time updates on delivery status, including snapshots and precise location tracking. Riders can validate deliveries, update their status, and manage pending orders effortlessly."
                 img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                link="https://ryder.mesky.in/login"
+                github=""
               />
             </div>
-            <div className="col-span-12">
+            {/* <div className="col-span-12">
               <FeaturedProject
                 type="Portfolio Website"
                 title="React Portfolio Website"
@@ -236,7 +227,7 @@ export default function Projects() {
                 link="https://devdreaming.com"
                 github="https://github.com/codebucks27"
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>
