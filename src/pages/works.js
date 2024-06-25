@@ -3,14 +3,12 @@ import { motion, useMotionValue } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import blog1 from "../../public/images/articles/inifinite-scroll.png";
-import blog3 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
-import blog4 from "../../public/images/articles/smooth scrolling in reactjs.png";
-import blog5 from "../../public/images/articles/create modal component in react using react portals.png";
-
+import blog2 from "../../public/images/articles/BMI.png";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRef } from "react";
 import TransitionEffect from "@/components/TransitionEffect";
+import { GithubIcon } from "@/components/Icons";
 
 const FramerImage = motion(Image);
 
@@ -84,7 +82,7 @@ const Article = ({ img, title, date, link }) => {
   );
 };
 
-const FeaturedArticle = ({ img, title, time, summary, link }) => {
+const FeaturedArticle = ({ img, title, time, summary, link, github }) => {
   return (
     <li
       className="relative w-full p-4 col-span-1 bg-light border border-dark border-solid rounded-2xl 
@@ -119,6 +117,27 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
       <span className="text-primary font-semibold dark:text-primaryDark">
         {time}
       </span>
+      <div className="mt-2 flex items-center">
+        <Link
+          href={github}
+          target={"_blank"}
+          className="w-10"
+          aria-label="Crypto Screener Application github link"
+        >
+          <GithubIcon />
+        </Link>
+        <Link
+          href={link}
+          target={"_blank"}
+          className="ml-4 rounded-lg
+             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
+             sm:px-4 sm:text-base
+            "
+          aria-label="Crypto Screener Application"
+        >
+          Visit Project
+        </Link>
+      </div>
     </li>
   );
 };
@@ -137,11 +156,21 @@ export default function Articles() {
           />
 
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
+            <div>
+              <FeaturedArticle
+                img={blog1}
+                title="build a custom infinite Scroll component in reactjs from scratch"
+                summary="Infinite scroll is a design pattern used in web development to load content continuously as the user scrolls down the page, without requiring them to click on pagination links."
+                link="https://infinite-scroll-1zpzo45um-balamurali55s-projects.vercel.app/"
+                github={"https://github.com/balamurali55/Infinite-Scroll"}
+              />
+            </div>
             <FeaturedArticle
-              img={blog1}
-              title="build a custom infinite Scroll component in reactjs from scratch"
-              summary="Infinite scroll is a design pattern used in web development to load content continuously as the user scrolls down the page, without requiring them to click on pagination links."
-              link="https://infinite-scroll-1zpzo45um-balamurali55s-projects.vercel.app/"
+              img={blog2}
+              title="build a Gauge BMI Calculator using reactjs from scratch"
+              summary="Create a BMI calculator using React.js that displays the BMI value on a gauge chart. Utilize state management to handle user inputs for weight and height, updating the gauge in real-time."
+              link=""
+              github={"https://github.com/balamurali55/BMI-Calculator-gauge"}
             />
           </ul>
         </Layout>
