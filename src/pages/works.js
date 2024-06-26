@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import blog1 from "../../public/images/articles/inifinite-scroll.png";
 import blog2 from "../../public/images/articles/BMI.png";
+import blog3 from "../../public/images/articles/Heart-Beat.png";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { useRef } from "react";
@@ -165,13 +166,24 @@ export default function Articles() {
                 github={"https://github.com/balamurali55/Infinite-Scroll"}
               />
             </div>
-            <FeaturedArticle
-              img={blog2}
-              title="build a Gauge BMI Calculator using reactjs from scratch"
-              summary="Create a BMI calculator using React.js that displays the BMI value on a gauge chart. Utilize state management to handle user inputs for weight and height, updating the gauge in real-time."
-              link=""
-              github={"https://github.com/balamurali55/BMI-Calculator-gauge"}
-            />
+            <div>
+              <FeaturedArticle
+                img={blog2}
+                title="build a Gauge BMI Calculator using reactjs from scratch"
+                summary="Create a BMI calculator using React.js that displays the BMI value on a gauge chart. Utilize state management to handle user inputs for weight and height, updating the gauge in real-time."
+                link=""
+                github={"https://github.com/balamurali55/BMI-Calculator-gauge"}
+              />
+            </div>
+            <div>
+              <FeaturedArticle
+                img={blog3}
+                title="Animated Heart using pure Css "
+                summary="Created a Amazing Animated Heart Beat using HTML and CSS "
+                link="https://heart-beat-sable.vercel.app/"
+                github={"https://github.com/balamurali55/heartBeat"}
+              />
+            </div>
           </ul>
         </Layout>
       </main>
