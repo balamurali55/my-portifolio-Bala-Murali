@@ -14,8 +14,8 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Passion Fuels Purpose!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            text="React JS Developer | Passionate About Modern Web Design"
+            className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
           <div className="grid w-full grid-cols-6 gap-16 sm:gap-8">
