@@ -45,22 +45,17 @@ const Skills = () => {
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
         Skills
       </h2>
-      <div className="grid grid-cols-4 gap-8 mt-10 space-y-4">
-        <div className="pt-4">
-          <Image
-            src={javascriptpNG}
-            width={90}
-            height={90}
-            alt="JavaScript"
-          />
+      <div className="grid grid-cols-4 gap-8 mt-10">
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
+          <Image src={javascriptpNG} width={90} height={90} alt="JavaScript" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={ReactIcon} width={110} height={110} alt="React" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={NextJsIcon} width={90} height={90} alt="Next.js" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image
             src={TailwindCssIcon}
             width={110}
@@ -68,28 +63,28 @@ const Skills = () => {
             alt="Tailwind CSS"
           />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={ReduxIcon} width={90} height={90} alt="Redux" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={ZustandIcon} width={150} height={150} alt="Zustand" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={Typescript} width={85} height={85} alt="TypeScript" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={postman} width={90} height={90} alt="Postman" />
         </div>
-        <div>
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg">
           <Image src={materialUi} width={110} height={110} alt="Material-UI" />
         </div>
-        <div className="relative right-2">
+        <div className="p-4 border border-gray-200 shadow-lg justify-center flex rounded-lg relative right-2">
           <Image src={GitHubIcon} width={170} height={170} alt="GitHub" />
         </div>
-        <div className="pt-2">
+        <div className="p-4 border border-gray-200 justify-center flex shadow-lg rounded-lg pt-2">
           <Image src={CssIcon} width={90} height={90} alt="CSS" />
         </div>
-        <div>
+        <div className="p-4 border justify-center flex border-gray-200 shadow-lg rounded-lg">
           <Image src={BootstrapIcon} width={110} height={110} alt="Bootstrap" />
         </div>
       </div>
