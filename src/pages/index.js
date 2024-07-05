@@ -11,13 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Awesome Portfolio Built with Nextjs</title>
-        <meta
-          name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
-        />
+        <title>Bala's Portfolio Built with Nextjs</title>
       </Head>
 
       <TransitionEffect />
@@ -41,9 +35,6 @@ export default function Home() {
               </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
-                  // whileHover={{
-                  //   cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='font-size:24px;'><text y='50%'>👆</text></svg>"), auto`,
-                  // }}
                   href=""
                   target={"_blank"}
                   className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
@@ -55,20 +46,12 @@ export default function Home() {
                 >
                   Resume <LinkArrow className="ml-1 !w-6 md:!w-4" />
                 </Link>
-
-                {/* <Link
-                  href="mailto:codebucks27@gmail.com"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline 
-                  dark:text-light md:text-base"
-                >
-                  Contact
-                </Link> */}
               </div>
             </div>
             <div className="w-1/2 lg:hidden md:inline-block md:w-full">
               <Image
                 src={profilePic}
-                alt="CodeBucks"
+                alt="profile"
                 className="h-auto w-full"
                 sizes="100vw"
                 priority
