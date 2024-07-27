@@ -10,8 +10,8 @@ import Typescript from "../../public/images/skills/Typescript.png";
 import postman from "../../public/images/skills/Postman.png";
 import materialUi from "../../public/images/skills/MaterialUi.png";
 import GitHubIcon from "../../public/images/skills/GitHubIcon.png";
-import CssIcon from "../../public/images/skills/CssIcon.png";
-import BootstrapIcon from "../../public/images/skills/Bootstrap.png";
+import HTML_CSS from "../../public/images/skills/HTML&CSS.png";
+import NodeJs from "../../public/images/skills/NodeJs.png";
 
 const Skills = () => {
   const iconsRef = useRef([]);
@@ -82,10 +82,10 @@ const Skills = () => {
           <Image src={GitHubIcon} width={170} height={170} alt="GitHub" />
         </div>
         <div className="p-4 border border-gray-200 justify-center flex shadow-lg rounded-lg pt-2">
-          <Image src={CssIcon} width={90} height={90} alt="CSS" />
+          <Image src={HTML_CSS} width={90} height={90} alt="CSS" />
         </div>
         <div className="p-4 border justify-center flex border-gray-200 shadow-lg rounded-lg">
-          <Image src={BootstrapIcon} width={110} height={110} alt="Bootstrap" />
+          <Image src={NodeJs} width={110} height={110} alt="Bootstrap" />
         </div>
       </div>
     </>
