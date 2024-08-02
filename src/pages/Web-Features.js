@@ -31,6 +31,11 @@ const MovingImg = ({ title, img, link }) => {
   }
   return (
     <>
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+        <Layout>
+          <AnimatedText text="Words Can Change Your Life !" />
+        </Layout>
+      </main>
       <Link
         href={link}
         target={"_blank"}
@@ -175,7 +180,7 @@ export default function Articles() {
                 github={"https://github.com/balamurali55/BMI-Calculator-gauge"}
               />
             </div>
-            <div>
+            {/* <div>
               <FeaturedArticle
                 img={blog3}
                 title="Animated Heart using pure Css "
@@ -183,7 +188,7 @@ export default function Articles() {
                 link="https://heart-beat-sable.vercel.app/"
                 github={"https://github.com/balamurali55/heartBeat"}
               />
-            </div>
+            </div> */}
           </ul>
         </Layout>
       </main>
