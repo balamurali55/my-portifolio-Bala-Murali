@@ -26,7 +26,7 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                Hello! I'm Bala Murali, a React.js developer with 3 years of
+                Hello! I'm Bala Murali, a React.js developer with 3+ years of
                 experience in crafting high-performance web applications. My
                 focus is on delivering clean, efficient code and engaging user
                 experiences. I am adept at collaborating with designers and
