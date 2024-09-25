@@ -197,6 +197,16 @@ export default function Projects() {
                 github=""
               />
             </div>
+            <div className="col-span-12 sm:col-span-12">
+              <FeaturedProject
+                type="Active Health pvt ltd"
+                title="Active Health online Health consultation"
+                summary="Active Health, is a single-page web application. It is a mission to help improve human longevity by simplifying healthcare. finding the right doctor, booking diagnostic tests, obtaining medicines, storing health records, and patient reports. Practitioner lab reports, e-prescriptions, and medication details, It provides the weekly timing and operation Schedule to the patients and practitioners"
+                // img={proj3}
+                // link="https://ryder.mesky.in/login"
+                github=""
+              />
+            </div>
           </div>
         </Layout>
       </main>
