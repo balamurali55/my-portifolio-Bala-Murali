@@ -26,7 +26,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         xs:rounded-[1.5rem] "
       />
 
-      <Link
+      {/* <Link
         href={link}
         target={"_blank"}
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
@@ -42,8 +42,8 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
               33vw"
           priority
         />
-      </Link>
-      <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+      </Link> */}
+      <div className="flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
         <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
           {type}
         </span>
@@ -59,26 +59,59 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
+        {type == "Delivery Portal" && (
+          <div>
+            <p className="font-bold">Key Features</p>
+            <ul
+              style={{ listStyleType: "disc", paddingLeft: "20px" }}
+              className="font-medium space-y-1"
+            >
+              <li>
+                Subscription Management: Easily create and manage subscriptions
+                for customers.
+              </li>
+              <li>
+                Order Creation: Streamlined order creation process for efficient
+                management.
+              </li>
+              <li>
+                Dashboard Insights: Interactive dashboards with valuable
+                analytics.
+              </li>
+              <li>
+                Transaction Handling: Manage transactions and refund flows
+                efficiently.
+              </li>
+              <li>
+                Attractive Tables and Pagination: Seamless navigation with
+                user-friendly interfaces.
+              </li>
+            </ul>
+          </div>
+        )}
+
         <div className="mt-2 flex items-center">
-          <Link
+          {/* <Link
             href={github}
             target={"_blank"}
             className="w-10"
             aria-label="Crypto Screener Application github link"
           >
             <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target={"_blank"}
-            className="ml-4 rounded-lg
+          </Link> */}
+          {link && (
+            <Link
+              href={link}
+              target={"_blank"}
+              className="ml-4 rounded-lg
              bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
              sm:px-4 sm:text-base
             "
-            aria-label="Crypto Screener Application"
-          >
-            Visit Project
-          </Link>
+              aria-label="Crypto Screener Application"
+            >
+              Visit Project
+            </Link>
+          )}
         </div>
       </div>
     </article>
@@ -94,7 +127,7 @@ const Project = ({ title, type, img, link, github }) => {
       "
     >
       <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
+        className="absolute  top-0 -right-3 -z-10 h-[100%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
          dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%]
         xs:rounded-[1.5rem]  "
       />
@@ -161,17 +194,19 @@ export default function Projects() {
       <main
         className={`mb-16  flex w-full flex-col items-center justify-center dark:text-light`}
       >
-        <Layout className="pt-16">
+        <Layout className="pt-12">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            text="Building the Future - React & Next.js Projects"
+            className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
                 type="E-commerce store"
                 title="Mesky: Your Premier Online Organic Product Store"
-                summary="Welcome to Mesky, your one-stop destination for the finest organic products. Our mission is to bring the best of nature to your doorstep, offering a wide range of high-quality, organic items that are ethically sourced and environmentally friendly. From fresh produce to natural skincare, every product in our store is carefully curated to promote a healthier, more sustainable lifestyle. Shop with us and experience the difference that true organic quality makes."
+                summary="As a front-end developer, I played a pivotal role in building Mesky from scratch, a comprehensive e-commerce platform dedicated to delivering high-quality organic products. My contributions included implementing seamless features such as a user-friendly shopping experience, milk subscription services, and an attractive landing page that highlights our mission.
+
+I developed robust functionalities for the cart and order management systems, allowing customers to easily manage their purchases. Additionally, I created a detailed brand page and a personalized profile section for users, ensuring they have all the tools needed for a convenient shopping experience. Through thoughtful design and careful attention to detail, I helped bring the best of nature directly to our customers’ doorsteps."
                 img={proj1}
                 link="https://mesky.in"
                 github="https://github.com/mesky-tech/main-react-app"
@@ -181,7 +216,7 @@ export default function Projects() {
               <FeaturedProject
                 type="Delivery Portal"
                 title="The Ultimate Vendor Delivery Management Portal"
-                summary="Delivery management portal designed for vendors to seamlessly monitor and control their entire delivery process. Our platform allows vendors to track orders in real-time, manage delivery agents, and oversee every aspect of the delivery chain. "
+                summary="Our Delivery Management Portal is expertly designed for vendors to seamlessly monitor and control their entire delivery process. Built using React and Next.js, the platform allows vendors to track orders in real-time, manage delivery agents, and oversee every aspect of the delivery chain."
                 img={proj2}
                 link="http://43.205.153.221:5173/dashboard"
                 github=""
@@ -207,6 +242,33 @@ export default function Projects() {
                 github=""
               />
             </div> */}
+          </div>
+          <div></div>
+          <div className="pt-6 flex justify-start">
+            <AnimatedText
+              text="From Code to Creation: My Freelance Projects"
+              className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            />
+          </div>
+          <div className="col-span-12 sm:col-span-12 py-4">
+            <FeaturedProject
+              type="Job Portal Application"
+              // title="Rider Delivery and Tracking Portal"
+              summary="Developed a dynamic Job Portal using React.js, allowing users to easily search for jobs while enabling recruiters to find and connect with job seekers. The platform features intuitive search functionalities, job listings, and candidate profiles, creating a seamless experience for both applicants and recruiters."
+              img={proj3}
+              link=""
+              github=""
+            />
+          </div>
+          <div className="col-span-12 sm:col-span-12 py-2">
+            <FeaturedProject
+              type="Active Health Application"
+              // title="Rider Delivery and Tracking Portal"
+              summary="As a front-end developer on a freelance basis, I contributed to a healthcare project focused on delivering essential services online. I utilized modern web technologies to create user-friendly interfaces, ensuring an intuitive experience for patients and healthcare providers. My work included optimizing performance and enhancing accessibility to meet the needs of diverse users."
+              img={proj3}
+              link=""
+              github=""
+            />
           </div>
         </Layout>
       </main>

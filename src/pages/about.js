@@ -25,10 +25,15 @@ export default function About() {
               </h2>
               <p className="font-medium">
                 Hi, my name is <strong>Bala Murali Krishna</strong>. I am a
-                dedicated front-end web developer with around 3+ years of
+                dedicated front-end web developer with around 2+ years of
                 experience in the field. I specialize in building responsive,
                 high-performance websites and applications using modern
-                technologies like React.js and Next.js.
+                technologies like React.js and Next.js. I have hands-on
+                experience working at Early Base, a startup, where I played a
+                pivotal role in building projects from scratch, contributing to
+                both the design and implementation of key features. My
+                experience includes collaborating with teams to create scalable
+                solutions that meet business needs efficiently.
               </p>
               <p className="my-4 font-medium">
                 My expertise includes creating seamless user interfaces,

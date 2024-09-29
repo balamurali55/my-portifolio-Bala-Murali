@@ -55,13 +55,13 @@ const Experience = () => {
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
+          {/* <Details
             position="Software Engineer"
             company="Vasmi Group"
             time="2021-2022 Sept"
             address="Visakhapatanam"
             work="Developing and maintaining user-facing features using React.js, ensuring responsive design and cross-browser compatibility. Collaborating with senior developers and team members to integrate APIs, debug issues, and improve the application's performance "
-          />
+          /> */}
           <Details
             position="Software Engineer SDE-1"
             company="Mesky"
