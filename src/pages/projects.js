@@ -2,12 +2,8 @@ import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/mesky.png";
-import proj2 from "../../public/images/projects/DeliveryPortal.png";
-import proj3 from "../../public/images/projects/RiderPortal.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
@@ -16,8 +12,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article
       className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
-border-solid border-dark bg-light p-12 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col 
-lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4 
+border-solid border-dark bg-light p-8 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col 
+lg:p-6 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4 
     "
     >
       <div
@@ -47,15 +43,21 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
           {type}
         </span>
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
-        >
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
+        {link ? (
+          <Link
+            href={link}
+            target={"_blank"}
+            className="underline-offset-2 hover:underline"
+          >
+<h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl xs:text-xl">
             {title}
           </h2>
         </Link>
+        ) : (
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl xs:text-xl">
+            {title}
+          </h2>
+        )}
         <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
@@ -90,24 +92,26 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           </div>
         )}
 
-        <div className="mt-2 flex items-center">
-          {/* <Link
-            href={github}
-            target={"_blank"}
-            className="w-10"
-            aria-label="Crypto Screener Application github link"
-          >
-            <GithubIcon />
-          </Link> */}
+        <div className="mt-2 flex items-center gap-4">
+          {github && (
+            <Link
+              href={github}
+              target={"_blank"}
+              className="w-10"
+              aria-label={`${title} github link`}
+            >
+              <GithubIcon />
+            </Link>
+          )}
           {link && (
             <Link
               href={link}
               target={"_blank"}
-              className="ml-4 rounded-lg
+              className="rounded-lg
              bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
              sm:px-4 sm:text-base
             "
-              aria-label="Crypto Screener Application"
+              aria-label={title}
             >
               Visit Project
             </Link>
@@ -199,76 +203,85 @@ export default function Projects() {
             text="Building the Future - React & Next.js Projects"
             className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
+          <div className="grid grid-cols-2 gap-8 gap-y-16 xl:gap-x-8 lg:gap-x-6 md:gap-y-12 sm:gap-x-4">
+            <div className="col-span-1">
               <FeaturedProject
-                type="E-commerce store"
-                title="Mesky: Your Premier Online Organic Product Store"
-                summary="As a front-end developer, I played a pivotal role in building Mesky from scratch, a comprehensive e-commerce platform dedicated to delivering high-quality organic products. My contributions included implementing seamless features such as a user-friendly shopping experience, milk subscription services, and an attractive landing page that highlights our mission.
-
-I developed robust functionalities for the cart and order management systems, allowing customers to easily manage their purchases. Additionally, I created a detailed brand page and a personalized profile section for users, ensuring they have all the tools needed for a convenient shopping experience. Through thoughtful design and careful attention to detail, I helped bring the best of nature directly to our customers’ doorsteps."
-                img={proj1}
-                link="https://mesky.in"
-                github="https://github.com/mesky-tech/main-react-app"
+                type="Weather App"
+                title="Weather Check Application"
+                summary="A real-time weather application that provides current weather conditions, forecasts, and detailed weather data for any location worldwide. Built with a clean and responsive UI for seamless user experience."
+                link="https://weather-app-dlpi.vercel.app/"
+                github="https://github.com/balamurali55/weather-App"
               />
             </div>
-            <div className="col-span-12 sm:col-span-12">
+            <div className="col-span-1 sm:col-span-1">
               <FeaturedProject
-                type="Delivery Portal"
-                title="The Ultimate Vendor Delivery Management Portal"
-                summary="Our Delivery Management Portal is expertly designed for vendors to seamlessly monitor and control their entire delivery process. Built using React and Next.js, the platform allows vendors to track orders in real-time, manage delivery agents, and oversee every aspect of the delivery chain."
-                img={proj2}
-                link="http://43.205.153.221:5173/dashboard"
-                github=""
+                type="BMI Calculator"
+                title="BMI Calculator with Gauge Visualization"
+                summary="A sleek BMI calculator featuring an interactive gauge visualization that displays Body Mass Index results with color-coded feedback. Users can easily calculate and understand their BMI category at a glance."
+                link="https://bmi-calculator-blue.vercel.app/"
+                github="https://github.com/balamurali55/BMI-Calculator-gauge"
               />
             </div>
-            <div className="col-span-12 sm:col-span-12">
+            <div className="col-span-1 sm:col-span-1">
               <FeaturedProject
-                type="Rider Portal"
-                title="Rider Delivery and Tracking Portal"
-                summary="Delivery portal tailored for the seamless distribution of milk products. Our platform empowers riders to efficiently deliver products while providing real-time updates on delivery status, including snapshots and precise location tracking. Riders can validate deliveries, update their status, and manage pending orders effortlessly."
-                img={proj3}
-                link="https://ryder.mesky.in/login"
-                github=""
+                type="CSS Animation"
+                title="Animated Heart Beat"
+                summary="A creative CSS-only animation project featuring a pulsating heart beat effect. Showcases advanced CSS animation techniques including keyframes, transforms, and timing functions to create a lifelike beating heart."
+                link="https://heart-beat-sable.vercel.app/"
+                github="https://github.com/balamurali55/heartBeat"
               />
             </div>
-            {/* <div className="col-span-12 sm:col-span-12">
+            <div className="col-span-1 sm:col-span-1">
               <FeaturedProject
-                type="Active Health pvt ltd"
-                title="Active Health online Health consultation"
-                summary="Active Health, is a single-page web application. It is a mission to help improve human longevity by simplifying healthcare. finding the right doctor, booking diagnostic tests, obtaining medicines, storing health records, and patient reports. Practitioner lab reports, e-prescriptions, and medication details, It provides the weekly timing and operation Schedule to the patients and practitioners"
-                img={null}
-                link=""
-                github=""
+                type="Infinite Scroll"
+                title="Infinite Scroll with Mock Data"
+                summary="A dynamic infinite scrolling application that loads mock data on demand as the user scrolls. Demonstrates efficient data fetching patterns, intersection observer implementation, and smooth content rendering."
+                link="https://infinite-scroll-indol.vercel.app/"
+                github="https://github.com/balamurali55/Infinite-Scroll"
               />
-            </div> */}
-          </div>
-          <div></div>
-          <div className="pt-6 flex justify-start">
-            <AnimatedText
-              text="From Code to Creation: My Freelance Projects"
-              className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-            />
-          </div>
-          <div className="col-span-12 sm:col-span-12 py-4">
-            <FeaturedProject
-              type="Job Portal Application"
-              // title="Rider Delivery and Tracking Portal"
-              summary="Developed a dynamic Job Portal using React.js, allowing users to easily search for jobs while enabling recruiters to find and connect with job seekers. The platform features intuitive search functionalities, job listings, and candidate profiles, creating a seamless experience for both applicants and recruiters."
-              img={proj3}
-              link=""
-              github=""
-            />
-          </div>
-          <div className="col-span-12 sm:col-span-12 py-2">
-            <FeaturedProject
-              type="Active Health Application"
-              // title="Rider Delivery and Tracking Portal"
-              summary="As a front-end developer on a freelance basis, I contributed to a healthcare project focused on delivering essential services online. I utilized modern web technologies to create user-friendly interfaces, ensuring an intuitive experience for patients and healthcare providers. My work included optimizing performance and enhancing accessibility to meet the needs of diverse users."
-              img={proj3}
-              link=""
-              github=""
-            />
+            </div>
+            <div className="col-span-1 sm:col-span-1">
+              <FeaturedProject
+                type="Restaurant App"
+                title="Simple Food Add-to-Cart Restaurant App"
+                summary="A restaurant ordering application with intuitive add-to-cart functionality. Users can browse menu items, add them to their cart, and manage orders seamlessly for a complete food ordering experience."
+                github="https://github.com/balamurali55/My-Restaruant-application"
+              />
+            </div>
+            <div className="col-span-1 sm:col-span-1">
+              <FeaturedProject
+                type="Bookmark App"
+                title="Bookmark Manager Application"
+                summary="A bookmark management application that allows users to save, organize, and manage their favorite web links. Features a clean interface for effortless bookmark organization and retrieval."
+                link="https://bookmark-tawny-beta.vercel.app/"
+                github="https://github.com/balamurali55/bookmark"
+              />
+            </div>
+            <div className="col-span-1 sm:col-span-1">
+              <FeaturedProject
+                type="E-commerce"
+                title="E-commerce Frontend Application"
+                summary="A modern e-commerce frontend built with React, featuring product listings, shopping cart management, and a responsive design for an optimal shopping experience across all devices."
+                github="https://github.com/balamurali55/ecommerce-frontend"
+              />
+            </div>
+            <div className="col-span-1 sm:col-span-1">
+              <FeaturedProject
+                type="E-commerce"
+                title="E-commerce Backend API (Node.js)"
+                summary="A robust Node.js backend API powering e-commerce operations. Includes product management, user authentication, order processing, and secure database integration for a complete server-side solution."
+                github="https://github.com/balamurali55/Ecommerce-backend-nodeJs"
+              />
+            </div>
+            <div className="col-span-1 sm:col-span-1">
+              <FeaturedProject
+                type="Auction App"
+                title="Player Auction Application"
+                summary="A real-time cricket player auction platform where users can bid on players, manage teams, and track auction progress. Built with an interactive UI for a seamless auction experience."
+                link="https://agent-6a156baabd0ffb124--effulgent-douhua-d3c2a7.netlify.app/"
+                github="https://github.com/balamurali55/Cricket-auction"
+              />
+            </div>
           </div>
         </Layout>
       </main>

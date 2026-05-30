@@ -45,20 +45,20 @@ const Skills = () => {
   }, []);
 
   const skills = [
-    { src: javascriptpNG, alt: "JavaScript", size: "w-20 h-20" },
-    { src: ReactIcon, alt: "React", size: "w-24 h-24" },
-    { src: NextJsIcon, alt: "Next.js", size: "w-20 h-20" },
-    { src: TailwindCssIcon, alt: "Tailwind CSS", size: "w-24 h-24" },
-    { src: ReduxIcon, alt: "Redux", size: "w-20 h-20" },
-    { src: ZustandIcon, alt: "Zustand", size: "w-28 h-28" },
-    { src: Typescript, alt: "TypeScript", size: "w-20 h-20" },
-    { src: postman, alt: "Postman", size: "w-20 h-20" },
-    { src: materialUi, alt: "Material-UI", size: "w-24 h-24" },
-    { src: GitHubIcon, alt: "GitHub", size: "w-28 h-28" },
-    { src: HTML_CSS, alt: "HTML & CSS", size: "w-20 h-20" },
-    { src: Firebase, alt: "Firebase", size: "w-24 h-24" },
-    { src: Ant, alt: "Ant Design", size: "w-24 h-24" },
     { src: NodeJs, alt: "Node.js", size: "w-24 h-24" },
+    { src: ReactIcon, alt: "React", size: "w-24 h-24" },
+    { src: NextJsIcon, alt: "Next.js", size: "w-24 h-24" },
+    { src: javascriptpNG, alt: "JavaScript", size: "w-24 h-24" },
+    { src: Typescript, alt: "TypeScript", size: "w-24 h-24" },
+    { src: TailwindCssIcon, alt: "Tailwind CSS", size: "w-24 h-24" },
+    { src: ReduxIcon, alt: "Redux", size: "w-24 h-24" },
+    { src: ZustandIcon, alt: "Zustand", size: "w-24 h-24" },
+    { src: materialUi, alt: "Material-UI", size: "w-24 h-24" },
+    { src: Ant, alt: "Ant Design", size: "w-24 h-24" },
+    { src: HTML_CSS, alt: "HTML & CSS", size: "w-24 h-24" },
+    { src: GitHubIcon, alt: "GitHub", size: "w-24 h-24" },
+    { src: postman, alt: "Postman", size: "w-24 h-24" },
+    { src: Firebase, alt: "Firebase", size: "w-24 h-24" },
     { src: Express, alt: "Express", size: "w-24 h-24" },
     { src: mongodb, alt: "MongoDB", size: "w-24 h-24" },
   ];
@@ -73,7 +73,7 @@ const Skills = () => {
           <div
             key={index}
             ref={(el) => (iconsRef.current[index] = el)}
-            className="p-4 border border-gray-200 shadow-lg flex justify-center items-center rounded-lg transform transition-all duration-500 opacity-0 translate-y-10 hover:scale-105"
+            className="p-4 border border-gray-200 shadow-lg flex justify-center items-center rounded-lg transform transition-all duration-500 opacity-0 translate-y-10 hover:scale-105 h-32"
           >
             <Image
               src={skill.src}

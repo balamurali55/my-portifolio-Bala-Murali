@@ -14,7 +14,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="React JS Developer | Passionate About Modern Web Design"
+            text="React.js & Node.js Developer | Passionate About Building Modern, Scalable Web Applications"
             className="mb-16 !text-4xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -25,10 +25,10 @@ export default function About() {
               </h2>
               <p className="font-medium">
                 Hi, my name is <strong>Bala Murali Krishna</strong>. I am a
-                dedicated front-end web developer with around 2+ years of
+                dedicated front-end web developer with around 4 years of
                 experience in the field. I specialize in building responsive,
                 high-performance websites and applications using modern
-                technologies like React.js and Next.js. I have hands-on
+                technologies like React.js and Next.js along side workend node js & Express js. I have hands-on
                 experience working at Early Base, a startup, where I played a
                 pivotal role in building projects from scratch, contributing to
                 both the design and implementation of key features. My

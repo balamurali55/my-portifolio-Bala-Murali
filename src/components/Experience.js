@@ -55,21 +55,29 @@ const Experience = () => {
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          {/* <Details
-            position="Software Engineer"
-            company="Vasmi Group"
-            time="2021-2022 Sept"
+          <Details
+            position="Software Engineer 2"
+            company="Imaginnovate"
+            time="2024-current Dec"
             address="Visakhapatanam"
-            work="Developing and maintaining user-facing features using React.js, ensuring responsive design and cross-browser compatibility. Collaborating with senior developers and team members to integrate APIs, debug issues, and improve the application's performance "
-          /> */}
+            work = "Worked as a Frontend Developer on a logistics platform, building and enhancing scalable web applications using React.js. Developed attractive user interfaces, integrated backend APIs, optimized application performance, and collaborated closely with product, design, and backend teams to deliver efficient logistics solutions and improve overall user experience."
+          />
           <Details
             position="Software Engineer SDE-1"
             company="Mesky"
             companyLink="mesky.in"
-            time="2022-present"
+            time="09/2022-11/2024"
             address="Gurugram"
             work="A React.js developer designs and implements user interfaces and components using React.js, ensuring they are efficient and reusable. They also collaborate with backend developers and designers to integrate API services and optimize performance across different devices and browsers."
           />
+          {/* <Details
+            position="Jr Software Engineer"
+            company="Vasmi Group"
+            // companyLink="mesky.in"
+            time="10/2021-09/2022"
+            address="VSP AP"
+            work="Worked as a Front-End Developer on the Active Health project, building responsive and user-friendly interfaces. Focused on optimizing user experience and implementing key features to support the platform’s healthcare services."
+          /> */}
         </ul>
       </div>
     </div>
